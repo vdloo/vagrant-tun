@@ -34,7 +34,7 @@ Vagrant.configure('2') do |config|
 ### Install the build deps
 
 ```
-sudo gem install bundler rake rspec simplecov coveralls
+sudo gem install bundler rake rspec simplecov
 ```
 
 ### Run the tests
