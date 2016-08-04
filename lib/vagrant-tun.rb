@@ -1,6 +1,3 @@
-# -*- encoding: utf-8 -*-
-# vim: set fileencoding=utf-8
-
 require "vagrant"
 require "vagrant-tun/command"
 
@@ -17,7 +14,7 @@ module VagrantTun
     end
 
     action_hook(:VagrantTun, :machine_action_up) do |hook|
-      hook.prepend(VagrantTun::Command)
+      hook.append(VagrantTun::Command)
     end
   end
 end
