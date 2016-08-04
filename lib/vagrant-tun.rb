@@ -13,7 +13,7 @@ module VagrantTun
       Config
     end
 
-    action_hook(:VagrantTun, :machine_provision) do |hook|
+    action_hook(:VagrantTun, :machine_action_up) do |hook|
       hook.append(VagrantTun::Command)
     end
   end

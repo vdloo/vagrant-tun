@@ -1,5 +1,3 @@
-require "vagrant"
-
 module VagrantTun
   class Command
 
@@ -43,7 +41,7 @@ module VagrantTun
       env[:machine].communicate.sudo('cat /dev/net/tun', {:error_check => false}) do |type, data|
         adapter_state = data.to_s.strip
         case adapter_state
-        when /\bFile descriptor in badnaan state\b/
+        when /\bFile descriptor in bad state\b/
           env[:ui].info("TUN adapter OK!")
           result = true
         when /\bNo such file or directory\b/
