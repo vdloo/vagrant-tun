@@ -18,7 +18,7 @@ describe VagrantTun::Command do
   subject { described_class.new(app, env) }
 
   # the method that we are going to test
-  describe "#call" do
+  describe "#ensure_tun_available" do
 
     context "when ensuring tun available" do
       it "tries all the strategies to get the TUN adapter in an available state and can fail" do
