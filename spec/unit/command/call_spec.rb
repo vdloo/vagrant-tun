@@ -10,11 +10,7 @@ describe VagrantTun::Command do
   let(:env) { { :machine => machine,  :ui => ui } }
 
   # pretend env contains the Vagrant ui element
-  let(:ui) do
-    double('ui').tap do |ui|
-      allow(ui).to receive(:info) { nil }
-    end
-  end
+  let(:ui) { { } }
 
   # pretend env[:machine].config.tun.enabled is false
   let(:machine) do
