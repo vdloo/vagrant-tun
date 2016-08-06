@@ -81,7 +81,7 @@ module VagrantTun
 
     def reboot(env)
       env[:ui].info("Rebooting because we couldn't load the tun module. Maybe the kernel was updated?")
-      env[:machine].action(:reload)
+      env[:machine].action(:reload, :provision_enabled => false)
       begin
         sleep 1
       end until env[:machine].communicate.ready?
