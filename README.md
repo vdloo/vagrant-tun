@@ -17,7 +17,7 @@ There are a couple of reasons why `/dev/net/tun` could be unavailable after prov
 
 ## Usage
 
-### Install the plugin
+### Install the plugin [from rubygems](https://rubygems.org/gems/vagrant-tun)
 
 ```
 $ vagrant plugin install vagrant-tun
