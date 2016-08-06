@@ -13,8 +13,8 @@ module VagrantTun
       Config
     end
 
-    action_hook(:VagrantTun, :machine_action_up) do |hook|
-      hook.append(VagrantTun::Command)
+    action_hook(:VagrantTun) do |hook|
+      hook.before(Vagrant::Action::Builtin::Provision, VagrantTun::Command)
     end
   end
 end
