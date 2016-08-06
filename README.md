@@ -47,13 +47,13 @@ $ make test
 ```
 $ make
 rake build
-vagrant-tun 0.0.2 built to pkg/vagrant-tun-0.0.2.gem.
+vagrant-tun 0.0.3 built to pkg/vagrant-tun-0.0.3.gem.
 ```
 
 ### Install the built gemfile
 ```
 $ make install
 find pkg/ -name '*.gem' | head -n 1 | xargs vagrant plugin install
-Installing the 'pkg/vagrant-tun-0.0.2.gem' plugin. This can take a few minutes...
-Installed the plugin 'vagrant-tun (0.0.2)'!
+Installing the 'pkg/vagrant-tun-0.0.3.gem' plugin. This can take a few minutes...
+Installed the plugin 'vagrant-tun (0.0.3)'!
 ```
