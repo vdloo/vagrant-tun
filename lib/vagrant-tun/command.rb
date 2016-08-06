@@ -7,10 +7,10 @@ module VagrantTun
     end
 
     def call(env)
+      @app.call(env)
       if env[:machine].config.tun.enabled
         ensure_tun_available(env)
       end
-      @app.call(env)
     end
 
     def try_load_tun_kernel_module(env)
